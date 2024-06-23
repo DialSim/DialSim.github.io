@@ -140,30 +140,48 @@
         An overall process of DialSim. Gray speech bubbles indicate predetermined utterances from the script, and white speech bubbles indicate spontaneous questions asked during the simulation. Colored speech bubbles indicate the agent's responses to the questions. 
     (Left) An unanswerable question. (Center) A question that references a specific time. (Right) A multi-hop question that requires understanding past sessions (i.e., the Left and Center boxes).
       </h2>
-
-      <h2 class="title is-3">Four key features of DialSim</h2>
-      <p>
-        <b>Real-Time Simulator</b>: For a conversational agent to function effectively in real-time, the agent should be capable of updating its memory and generating responses on the fly. To evaluate this, DialSim measures the accuracy of responses within a predefined time limit. To the best of our knowledge, this is the first work that evaluates the performance of a conversational agent in a time-constrained environment.
-      </p>
-      <p>
-        <b>Evaluating Long-Term Multi-Party Dialogue Understanding</b>: DialSim includes multi-party dialogues with an average length of 350k tokens, making it the longest among existing long-term dialogue datasets. Throughout the simulation, the agent faces complex questions that demand comprehension and reasoning across several multi-party sessions, ensuring a thorough assessment of its understanding capabilities.
-      </p>
-      <p>
-        <b>Randomized Test</b>: In our simulator, there is an average of 1,300 sessions of conversations occurring over a period of 5 years as assumed in the corresponding TV show. For each session, a randomly picked character asks a question that is randomly sampled from an average of 1,000 candidates, at a random time.  This setup allows us to test whether an agent can respond appropriately in an unpredictable environment, resembling real-world settings. Additionally, since a random set of questions is given for each test, repeating the tests multiple times allows us to measure the agent's performance variability and reliability.
-      <\p>
-      <p>
-        <b>Adversarial Test</b>: LLM-based agents are likely to have prior knowledge about these TV shows from the pre-training process. Since such agents can provide answers without referencing the actual dialogue history, it is crucial to ensure that the agent relies strictly on the history for its responses. To achieve this, we developed adversarial tests that modify character names in two specific ways: by swapping their names with each other (e.g., Joey &#8596; Monica) or by assigning new names to them (e.g., Joey &#8594; John). This approach ensures that the agent's responses depend strictly on the context of the dialogue history.
-      </p>
     </div>
   </div>
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">DialSim</h2>
+        <p>
+          DialSim places an agent in the role of the main character of a TV show, engaging it in an extensive conversation based on the show’s scripted content. During this conversation, the agent is evaluated for its ability to respond appropriately to spontaneous questions from other speakers within a predefined time limit (e.g., 1s / 3s / 5s). The agent should be able to answer questions based on the information from the past dialogue and acknowledge when it does not know the answer. DialSim simulates three different dialogue environments based on scripts from popular TV shows (i.e., Friends, The Big Bang Theory, and The Office), and it has the following four main features.
+        </p>
+        <div class="content has-text-justified">
+          <h2 class="title is-4">Four key features of DialSim</h2>
+          <p>
+            <b>Real-Time Simulator</b>: For a conversational agent to function effectively in real-time, the agent should be capable of updating its memory and generating responses on the fly. To evaluate this, DialSim measures the accuracy of responses within a predefined time limit. To the best of our knowledge, this is the first work that evaluates the performance of a conversational agent in a time-constrained environment.
+          </p>
+          <p>
+            <b>Evaluating Long-Term Multi-Party Dialogue Understanding</b>: DialSim includes multi-party dialogues with an average length of 350k tokens, making it the longest among existing long-term dialogue datasets. Throughout the simulation, the agent faces complex questions that demand comprehension and reasoning across several multi-party sessions, ensuring a thorough assessment of its understanding capabilities.
+          </p>
+          <p>
+            <b>Randomized Test</b>: In our simulator, there is an average of 1,300 sessions of conversations occurring over a period of 5 years as assumed in the corresponding TV show. For each session, a randomly picked character asks a question that is randomly sampled from an average of 1,000 candidates, at a random time.  This setup allows us to test whether an agent can respond appropriately in an unpredictable environment, resembling real-world settings. Additionally, since a random set of questions is given for each test, repeating the tests multiple times allows us to measure the agent's performance variability and reliability.
+          </p>
+          <p>
+            <b>Adversarial Test</b>: LLM-based agents are likely to have prior knowledge about these TV shows from the pre-training process. Since such agents can provide answers without referencing the actual dialogue history, it is crucial to ensure that the agent relies strictly on the history for its responses. To achieve this, we developed adversarial tests that modify character names in two specific ways: by swapping their names with each other (e.g., Joey &#8596; Monica) or by assigning new names to them (e.g., Joey &#8594; John). This approach ensures that the agent's responses depend strictly on the context of the dialogue history.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+  </div>
+</section>
+
+  
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column">
         <h2 class="title is-3">Motivation</h2>
         <div class="content has-text-justified">
